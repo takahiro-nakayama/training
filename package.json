@@ -2,21 +2,17 @@
   "name": "training",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
+    "dev": "parcel src/**/*.html -p 8888 --open -d dist",
+    "build": "rm public/* ;parcel build --no-cache --no-source-maps src/**/*.html -d public --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/takahiro-nakayama/training.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/takahiro-nakayama/training/issues"
-  },
-  "homepage": "https://github.com/takahiro-nakayama/training#readme",
-  "devDependencies": {
+  "dependencies": {
     "parcel-bundler": "^1.12.3"
+  },
+  "devDependencies": {
+    "sass": "^1.20.1"
   }
 }

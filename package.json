@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel src/**/*.html -p 8888 --open -d dist",
-    "build": "rm docs/* ;parcel build --no-cache --no-source-maps src/**/*.html -d docs --public-url ./",
+    "dev": "parcel src/index.html -p 8888 --open -d dist",
+    "build": "rm docs/* ;parcel build --no-cache --no-source-maps src/index.html -d docs --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

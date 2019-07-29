@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel src/**/*.html -p 8888 --open -d dist",
-    "build": "rm public/* ;parcel build --no-cache --no-source-maps src/**/*.html -d public --public-url ./",
+    "build": "rm docs/* ;parcel build --no-cache --no-source-maps src/**/*.html -d docs --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

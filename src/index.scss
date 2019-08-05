@@ -21,6 +21,7 @@ body {
   font-family: "Helvetica Neue", Arial, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-y: scroll;
 }
 
 .issues9 {
@@ -120,3 +121,26 @@ body {
   }
 }
 
+.jsc-confirm {
+  margin:0 auto;
+  
+  .ui-dialog-titlebar {
+    display: none;
+  }
+  &.ui-dialog {
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.jsc-confirm + .ui-widget-overlay {
+  background: #000000;
+  opacity: 0.5;
+}
+
+.ohh {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}

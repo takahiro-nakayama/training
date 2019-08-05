@@ -6,6 +6,7 @@ const $ = require('jquery');
 window.jQuery = $; // for jquery-ui
 require('jquery-ui-dist/jquery-ui');
 
+
 function confirmExPromise(message) {
   var _showConfirmDialog = function(message, okFunction, cancelFunction) {
     // Dialogを破棄する関数
@@ -34,6 +35,15 @@ function confirmExPromise(message) {
       closeOnEscape: true,
       close: _funcCancel,
 
+      position: [null, 32],
+      show: 'fade',
+      width: 380,
+      height: 100,
+      resizable: false,
+
+    
+    
+
       // prettier-ignore
       // 各ボタンの設定
       buttons: [
@@ -57,12 +67,21 @@ function approve() {
 
 function notApprove() {
   alert('Cancel!');
+  $('.test').removeClass('ohh')
 }
 
 
 $(() => {
+  $("#mydialog").dialog({ autoOpen: false });
+ 
+  // ボタンのクリックイベント
+  $("#btn_action").click(function(){
+      // ダイアログを表示する
+      $("#mydialog").dialog("open");
+  });
   $('.js-confirm').on('click', function() {
     console.log('test');
+    $('.test').addClass('ohh')
     confirmExPromise('Are you ready?')
         .then(approve) // ※OK時の処理
         .catch(notApprove); // ※Cancel時の処理
